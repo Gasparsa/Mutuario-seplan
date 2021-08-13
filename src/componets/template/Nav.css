@@ -1,0 +1,24 @@
+aside.nav{
+    background-color: var(--bg-dark);
+    justify-content: center;
+    box-shadow: 
+    2px 0 10px 0 rgba(0,0,0,0.12),
+    2px 0 15px 0 rgba(0,0,0, 0.09);
+ 
+    
+
+}
+
+.menu a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    font-weight: 300;
+    padding: 15px;
+    overflow: hidden;
+}
+
+.menu a:hover {
+    background-color: rgb(255, 255, 0);
+    overflow: hidden;
+}

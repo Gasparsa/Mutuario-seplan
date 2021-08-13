@@ -1,0 +1,23 @@
+header.header{
+    background-color: #00a588;
+    padding: 0x 15px;
+    overflow: hidden;
+    white-space: nowrap;
+    box-shadow: var(--shadow);
+}
+
+header.header h1{
+    font-size: 1,8em;
+    justify-content: center;
+    display: flex;
+    box-shadow: var(--shadow);
+    align-items: center;
+}
+
+header.header h5{
+    font-size: 1,8em;
+    justify-content: center;
+    display: flex;
+    box-shadow: var(--shadow);
+    align-items: center;
+}
