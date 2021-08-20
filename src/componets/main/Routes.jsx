@@ -6,11 +6,27 @@ import Home from '../template/Home'
 import UserRegister from '../user/userRegister'
 import UserMode from '../template/UserMode'
 
+import { isAuthenticated } from "../services/auth";
+
+const PrivateRoute = ({ component: Component, ...rest }) => (
+    <Route
+      {...rest}
+      render={props =>
+        isAuthenticated() ? (
+          <Component {...props} />
+        ) : (
+          <Redirect to={{ pathname: "/", state: { from: props.location } }} />
+        )
+      }
+    />
+  );
 export default props=>
-    <Switch>
-        <Route exact path='/' component={Home}/>
-        <Route path='/audit' component={SearchUser}/>
-        <Route path = '/search' component={SearchAll}/>
-        <Route path = '/register' component = {UserMode}/>
-        <Redirect from='*' to= '/'></Redirect>
-    </Switch>
+    
+        <Switch>
+            <Route exact path='/' component={Home}/>
+            <PrivateRoute path='/audit' component={SearchUser}/>
+            <Route path = '/search' component={SearchAll}/>
+            <Route path = '/register' component = {UserMode}/>
+            <Redirect from='*' to= '/'></Redirect>
+        </Switch>
+    
