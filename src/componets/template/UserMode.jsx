@@ -1,6 +1,6 @@
 import './UserMode.css'
 
-import UserRegister from '../user/userRegister'
+import UserRegister from '../user/userRegister.jsx'
 
 export default props =>
    

@@ -1,23 +1,37 @@
 import React,{Component} from 'react';
 
 import './userRegister.js'
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 
 import { Form, Container } from "./userRegister.js";
 
+import api from '../services/api.jsx';
+
 class SignUp extends Component {
   state = {
-    username: "",
+    name: "",
     email: "",
     password: "",
     cpf:"",
     error: ""
   };
 
-  handleSignUp = e => {
+  handleSignUp = async e => {
     e.preventDefault();
-    alert("Eu vou te registrar");
+    const { name, email, password, cpf} = this.state;
+    if (!name || !email ||!cpf ||!password) {
+      this.setState({ error: "Preencha todos os dados para se cadastrar" });
+    } else {
+      try {
+        await api.post("user/", { name, email,cpf, password });
+        this.props.history.push("/");
+      } catch (err) {
+        console.log(err);
+        this.setState({ error: "Ocorreu um erro ao registrar sua conta. T.T" });
+      }
+    }
   };
+  
 
   render() {
     return (
@@ -27,7 +41,7 @@ class SignUp extends Component {
           <input
             type="text"
             placeholder="Nome de usuário"
-            onChange={e => this.setState({ username: e.target.value })}
+            onChange={e => this.setState({ name: e.target.value })}
           />
           <input
             type="email"
@@ -53,4 +67,5 @@ class SignUp extends Component {
   }
 }
 
-export default SignUp;
+
+export default withRouter(SignUp);
