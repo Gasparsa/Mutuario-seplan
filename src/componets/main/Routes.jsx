@@ -1,10 +1,10 @@
 import React from 'react'
 import { Switch, Route, Redirect} from 'react-router'
-import SearchUser from '../template/SearchUser'
-import SearchAll from '../template/SearchAll'
-import Home from '../template/Home'
-import UserRegister from '../user/userRegister'
-import UserMode from '../template/UserMode'
+import SearchUser from '../pages/SearchUser'
+import SearchAll from '../pages/SearchAll'
+import Home from '../templates/home/Home'
+
+import UserMode from '../pages/UserMode'
 import SingIn from '../user/userSingIn.jsx'
 
 import { isAuthenticated } from "../services/auth";

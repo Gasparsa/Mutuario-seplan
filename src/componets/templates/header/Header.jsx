@@ -1,6 +1,6 @@
 import './Header.css'
 import React from 'react'
-import './SearchBar.jsx'
+
 
 
 export default props =>

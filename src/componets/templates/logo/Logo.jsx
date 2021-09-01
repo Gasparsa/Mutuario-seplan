@@ -1,5 +1,5 @@
 import './Logo.css'
-import logo from '../../assets/imgs/pref_render.png'
+import logo from '../../../assets/imgs/pref_render.png'
 import React from 'react'
 
 

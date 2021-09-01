@@ -1,11 +1,11 @@
 import './App.css'
 import React from 'react'
 import {HashRouter} from 'react-router-dom'
-import Logo from '../template/Logo'
-import Nav from '../template/Nav'
+import Logo from '../templates/logo/Logo'
+import Nav from '../templates/nav/Nav'
 
-import Footer from '../template/Footer'
-import Header from '../template/Header'
+import Footer from '../templates/footer/Footer'
+import Header from '../templates/header/Header'
 import Routes from './Routes'
 
 export default props =>
