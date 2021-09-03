@@ -1,6 +1,6 @@
 import './SearchUser.css'
 import React, { Fragment } from 'react'
-import SearchBar from './SearchBar.jsx'
+import SearchBar from '../pages/SearchBar/SearchBar'
 
 export default props =>
     <React.Fragment>

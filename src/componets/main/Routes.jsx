@@ -1,7 +1,7 @@
 import React from 'react'
 import { Switch, Route, Redirect} from 'react-router'
 import SearchUser from '../pages/SearchUser'
-import SearchAll from '../pages/SearchAll'
+import SearchAll from '../pages/searchAll/SearchAll'
 import Home from '../templates/home/Home'
 
 import UserMode from '../pages/UserMode'
